@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TodoComponent } from './apps/todo-list/todo/todo.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
@@ -23,7 +22,6 @@ import { TodoListComponent } from './apps/todo-list/todo-list.component';
     NavbarComponent,
     SidebarComponent,
     FooterComponent,
-    DashboardComponent,
     TodoListComponent,
     TodoComponent,
     SpinnerComponent,
