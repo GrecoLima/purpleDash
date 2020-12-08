@@ -3,7 +3,8 @@
 @import '../../../styles.scss';
 .sidebar {
   min-height: calc(100vh - #{$navbar-height});
-  background: $sidebar-bg;
+  // background: $sidebar-bg;
+  background: #2D323E;
   font-family: $type1-regular;
   padding: 0;
   width: $sidebar-width-lg;
@@ -123,6 +124,7 @@
         background: $sidebar-menu-hover-bg;
       }
       &.nav-profile {
+        background-color:#1E2129;
         .nav-link {
           height: auto;
           line-height: 1;
@@ -138,6 +140,8 @@
             }
           }
           .nav-profile-text {
+            color: #F1FFFF;
+            
             display: flex;
             flex-direction: column;
             margin-left: 1rem;

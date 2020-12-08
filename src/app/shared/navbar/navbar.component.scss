@@ -1,12 +1,14 @@
 /* Navbar */
 
 @import '../../../styles.scss';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 
 /* Navbar */
 
 .navbar {
   font-family: $type1-light;
   background: $navbar-bg;
+  background-color: #F5F5F5;
   transition:background $action-transition-duration $action-transition-timing-function;
   -webkit-transition:background $action-transition-duration $action-transition-timing-function;
   -moz-transition:background $action-transition-duration $action-transition-timing-function;
@@ -15,12 +17,18 @@
   .navbar-brand {
     width: 110px;
   }
+  .nav-bar-logo{
+    font-family: 'Open Sans', sans-serif;
+    color: #0399E2;
+  }
+
   .navbar-brand-wrapper {
     transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
     -webkit-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
     -moz-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
     -ms-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
-    background: $navbar-bg;
+    // background: $navbar-bg;
+    background-color: #1E2129;
     width: $sidebar-width-lg;
     height: $navbar-height;
 
@@ -154,6 +162,7 @@
     .navbar-nav {
       flex-direction: row;
       align-items: center;
+      background-color:#F5F5F5;
       .nav-item {
         .nav-link {
           color: inherit;

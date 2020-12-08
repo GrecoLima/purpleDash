@@ -30,7 +30,9 @@ export class NavbarComponent implements OnInit {
       this.iconOnlyToggled = !this.iconOnlyToggled;
       if(this.iconOnlyToggled) {
         body.classList.add('sidebar-icon-only');
+        body.getElementsByClassName('nav-bar-logo')[0].innerHTML = "S5";
       } else {
+        body.getElementsByClassName('nav-bar-logo')[0].innerHTML = "SAN 5";
         body.classList.remove('sidebar-icon-only');
       }
     } else {
