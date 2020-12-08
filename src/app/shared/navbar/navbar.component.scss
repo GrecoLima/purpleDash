@@ -3,6 +3,7 @@
 @import '../../../styles.scss';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&family=Montserrat:wght@300&display=swap');
 
 /* Navbar */
 
@@ -301,6 +302,7 @@
               }
             }
             .nav-profile-text {
+
               margin-left: 1.25rem;
               .rtl & {
                 margin-left: 0;

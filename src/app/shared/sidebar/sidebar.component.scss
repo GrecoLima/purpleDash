@@ -1,6 +1,8 @@
 /* Sidebar */
 
 @import '../../../styles.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
 .sidebar {
   min-height: calc(100vh - #{$navbar-height});
   // background: $sidebar-bg;
@@ -141,8 +143,8 @@
           }
           .nav-profile-text {
             color: #F1FFFF;
-            
             display: flex;
+            font-family: 'Montserrat', sans-serif;
             flex-direction: column;
             margin-left: 1rem;
             .rtl & {
