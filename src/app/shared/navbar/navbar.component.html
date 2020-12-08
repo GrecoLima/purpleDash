@@ -1,9 +1,11 @@
 <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-  <div id="myHeader" class="nav-bar-logo-container text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+  <div id="myHeader"
+    class="nav-bar-logo-container text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
     <h3 class="nav-bar-logo">SAN 5</h3>
   </div>
   <div class="navbar-menu-wrapper d-flex align-items-stretch">
-    <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize" (click)="toggleSidebar()">
+    <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize"
+      (click)="toggleSidebar()">
       <span class="mdi mdi-menu"></span>
     </button>
     <div class="search-field d-none d-md-block">
@@ -39,12 +41,32 @@
           </a>
         </div>
       </li>
+      <!-- Bandeiras da linguagem-->
+      <li class="nav-item dropdown" ngbDropdown>
+        <a class="nav-link dropdown-toggle" ngbDropdownToggle>
+
+          <img src="assets/images/flags/br.png" alt="image"> <span class="nav-item-flags">PT</span>
+
+        </a>
+        <div class="dropdown-menu navbar-dropdown" ngbDropdownMenu aria-labelledby="profileDropdown">
+          <a class="dropdown-item" href="javascript:;">
+            <img src="assets/images/flags/us.png" alt="image"> <span class="nav-item-flags">US</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="javascript:;">
+            <img src="assets/images/flags/ar.png" alt="image"> <span class="nav-item-flags">AR</span>
+          </a>
+        </div>
+      </li>
+
+      <!-- //Bandeiras da linguagem-->
       <li class="nav-item dropdown" ngbDropdown>
         <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" ngbDropdownToggle>
           <i class="mdi mdi-email-outline"></i>
           <span class="count-symbol bg-warning"></span>
         </a>
-        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" ngbDropdownMenu aria-labelledby="messageDropdown">
+        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" ngbDropdownMenu
+          aria-labelledby="messageDropdown">
           <h6 class="p-3 mb-0">Messages</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item preview-item">
@@ -91,7 +113,8 @@
           <i class="mdi mdi-bell-outline"></i>
           <span class="count-symbol bg-danger"></span>
         </a>
-        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" ngbDropdownMenu aria-labelledby="notificationDropdown">
+        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" ngbDropdownMenu
+          aria-labelledby="notificationDropdown">
           <h6 class="p-3 mb-0">Notifications</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item preview-item">
@@ -150,7 +173,8 @@
         </a>
       </li>
     </ul>
-    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" (click)="toggleOffcanvas()">
+    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+      (click)="toggleOffcanvas()">
       <span class="mdi mdi-menu"></span>
     </button>
   </div>
