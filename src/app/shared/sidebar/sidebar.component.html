@@ -42,6 +42,19 @@
         </ul>
       </div>
     </li>
+
+
+    <!--Tipo Esgotamento-->
+
+    <li class="nav-item" [ngClass]="{ 'active': tipoesgotamento.isActive }">
+      <a class="nav-link" routerLink="tables/tipo-esgotamento" routerLinkActive #tipoesgotamento="routerLinkActive">
+        <span class="menu-title">Tipo Esgotamento</span>
+        <i class="mdi mdi-table-large menu-icon"></i>
+      </a>
+    </li>
+
+    <!--//Tipo Esgotamento-->
+
     <li class="nav-item" [ngClass]="{ 'active': forms.isActive }">
       <a class="nav-link" routerLink="forms/basic-elements" routerLinkActive #forms="routerLinkActive">
         <span class="menu-title">Form elements</span>
