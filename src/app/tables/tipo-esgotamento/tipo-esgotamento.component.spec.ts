@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TipoEsgotamentoComponent } from './tipo-esgotamento.component';
 
+
 describe('TipoEsgotamentoComponent', () => {
   let component: TipoEsgotamentoComponent;
   let fixture: ComponentFixture<TipoEsgotamentoComponent>;
