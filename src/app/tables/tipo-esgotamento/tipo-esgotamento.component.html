@@ -29,7 +29,7 @@
                                 Data Atualização
                             </th>
                             <th>
-
+                                Ações
                             </th>
                         </tr>
                     </thead>
@@ -49,6 +49,10 @@
                             </td>
                             <td>
 
+                                    <button class="btn btn-success btn-sm rounded-0 justify-content-start" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="mdi mdi-pencil"></i></button>
+                                    <button class="btn btn-danger btn-sm rounded-0  justify-content-end" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="mdi mdi-delete"></i></button>
+                                    
+                              
                             </td>
                         </tr>
                         <tr>
@@ -65,6 +69,9 @@
                                 17/11/2020 17:15:00
                             </td>
                             <td>
+                                
+                                <button class="btn btn-success btn-sm rounded-0 justify-content-start" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="mdi mdi-pencil"></i></button>
+                                <button class="btn btn-danger btn-sm rounded-0  justify-content-end" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="mdi mdi-delete"></i></button>
 
                             </td>
                         </tr>
@@ -83,6 +90,10 @@
                             </td>
                             <td>
 
+                                
+                                <button class="btn btn-success btn-sm rounded-0 justify-content-start" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="mdi mdi-pencil"></i></button>
+                                <button class="btn btn-danger btn-sm rounded-0  justify-content-end" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="mdi mdi-delete"></i></button>
+
                             </td>
                         </tr>
                         <tr>
@@ -99,6 +110,10 @@
                                 17/11/2020 17:15:00
                             </td>
                             <td>
+
+                                
+                                <button class="btn btn-success btn-sm rounded-0 justify-content-start" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="mdi mdi-pencil"></i></button>
+                                <button class="btn btn-danger btn-sm rounded-0  justify-content-end" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="mdi mdi-delete"></i></button>
 
                             </td>
                         </tr>
@@ -117,6 +132,10 @@
                             </td>
                             <td>
 
+                                
+                                <button class="btn btn-success btn-sm rounded-0 justify-content-start" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="mdi mdi-pencil"></i></button>
+                                <button class="btn btn-danger btn-sm rounded-0  justify-content-end" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="mdi mdi-delete"></i></button>
+
                             </td>
                         </tr>
                         <tr>
@@ -134,6 +153,10 @@
                             </td>
                             <td>
 
+                                
+                                <button class="btn btn-success btn-sm rounded-0 justify-content-start" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="mdi mdi-pencil"></i></button>
+                                <button class="btn btn-danger btn-sm rounded-0  justify-content-end" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="mdi mdi-delete"></i></button>
+                                
                             </td>
                         </tr>
                     </tbody>
@@ -174,21 +197,26 @@
             </button>
         </div>
         <div class="modal-body">
-            <form class="example-form"></form>
 
-            <!-- <mat-form-field class="example-full-width">
-                <mat-label>Email</mat-label>
-                <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
-                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-                    Please enter a valid email address
-                </mat-error>
-                <mat-error *ngIf="emailFormControl.hasError('required')">
-                    Email is <strong>required</strong>
-                </mat-error>
-            </mat-form-field> -->
+            <mat-form-field appearance="legacy" class="example-full-width">
+                <mat-label></mat-label>
 
+                <input class="input-novo-esgotamento" matInput [formControl]="textFormControl"
+                    placeholder="Tipo de esgotamento">
+
+                <mat-error *ngIf="textFormControl.hasError('required')">
+                    Informação obrigatória!
+                </mat-error>
+
+            </mat-form-field>
         </div>
 
+        <div class="modal-footer">
+
+            <button type="button" class="btn btn-light font-weight-bold" data-dismiss="modal"
+                (click)="modal.dismiss()">Cancelar</button>
+            <button type="button" href="/" class="btn btn-light font-weight-bold" [disabled]="!textFormControl.valid">Salvar</button>
+        </div>
     </div>
 </ng-template>
 <!-- Modal Ends -->
