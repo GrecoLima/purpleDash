@@ -117,13 +117,17 @@
             font-family: $type1-medium;            
           }
           i {
-            color: theme-color(primary);
+            color: theme-color(light);
           }
         }
       }
 
       &:hover{
+        //TODO 
         background: $sidebar-menu-hover-bg;
+        // border-top-right-radius: 25em;
+        // border-bottom-right-radius: 25em;
+        // width: 95%;
       }
       &.nav-profile {
         background-color:#1E2129;

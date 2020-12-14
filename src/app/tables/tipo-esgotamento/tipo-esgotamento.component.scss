@@ -1,15 +1,46 @@
-@import '../../../styles.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
-
-.page-header{
-    font-family: 'Montserrat', sans-serif;
-}
-
-.tabela-dados{
+*{
     font-family: 'Montserrat', sans-serif;
 }
 
 .mdi{
     padding:10 px;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+.input-novo-esgotamento{
+    color:black;
+    border: 1rem;
+    border-bottom: 1px solid #ccc!important;
+}
+.modal-content{
+    background-color: white;
+}
+
+.modal-header {
+    border-bottom: 0 none;
+}
+
+.modal-footer {
+    border-top: 0 none;
+}
+
+button{
+
+    font: bolder;
+    
+}
+
+mat-error{
+    color: red;
+    font-size: small;
 }

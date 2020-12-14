@@ -1,0 +1,164 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <h1>
+    Cadastro de Clientes
+  </h1>
+  <form [formGroup]="angForm" #formCliente>
+
+    <div fxLayout="row wrap">
+      <mat-form-field fxFlex="25">
+        <mat-label>Cidade</mat-label>
+        <mat-select formControlName="cidade">
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let cidade of cidades" [value]="cidade.id">
+            {{cidade.nomeCidade}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngFor="let validation of cliente_validation_messages.cidade">
+          <mat-error *ngIf="angForm.controls['cidade'].hasError(validation.type)">
+            {{validation.message}}
+          </mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field fxFlex="50">
+        <mat-label>Nome</mat-label>
+        <input matInput type="text" formControlName="nome">
+        <mat-error *ngFor="let validation of cliente_validation_messages.nome">
+          <mat-error class="error-message"
+            *ngIf="angForm.controls['nome'].hasError(validation.type) && (angForm.controls['nome'].dirty || angForm.controls['nome'].touched)">
+            {{validation.message}}</mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field fxFlex="25">
+        <mat-label>Tipo</mat-label>
+        <mat-select formControlName="tipo" #item (ngModelChange)="selecionaTipo(item.value)">
+          <mat-option>None</mat-option>
+          <mat-option value="fisica">FISÍCA</mat-option>
+          <mat-option value="juridica">JURIDICA</mat-option>
+        </mat-select>
+        <!--<mat-hint>Errors appear instantly!</mat-hint>-->
+        <mat-error *ngFor="let validation of cliente_validation_messages.tipo">
+          <mat-error *ngIf="angForm.controls['tipo'].hasError(validation.type)">
+            {{validation.message}}
+          </mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field fxFlex="25" *ngIf="FISICA">
+        <mat-label>Sexo</mat-label>
+        <mat-select formControlName="sexo">
+          <mat-option>None</mat-option>
+          <mat-option value="M">MASCULINO</mat-option>
+          <mat-option value="F">FEMININO</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field fxFlex="50">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput formControlName="email" placeholder="Ex. nomecliente@example.com">
+        <mat-error *ngFor="let validation of cliente_validation_messages.email">
+          <mat-error class="error-message"
+            *ngIf="angForm.controls['email'].hasError(validation.type) && (angForm.controls['email'].dirty || angForm.controls['email'].touched)">
+            {{validation.message}}</mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field color="accent" appearance="fill" fxFlex="25" *ngIf="FISICA">
+        <mat-label>Data nascimento</mat-label>
+        <input matInput [matDatepicker]="picker2">
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2 color="primary"></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field fxFlex="25" *ngIf="FISICA">
+        <mat-label>RG</mat-label>
+        <input type="text" matInput formControlName="rg">
+        <mat-error *ngFor="let validation of cliente_validation_messages.rg">
+          <mat-error class="error-message"
+            *ngIf="angForm.controls['rg'].hasError(validation.type) && (angForm.controls['rg'].dirty || angForm.controls['rg'].touched)">
+            {{validation.message}}</mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field fxFlex="25" *ngIf="FISICA">
+        <mat-label>CPF</mat-label>
+        <input [textMask]="{mask: cpfMask, guide: false}" type="text" matInput formControlName="cpf">
+        <mat-error *ngFor="let validation of cliente_validation_messages.cpf">
+          <mat-error class="error-message"
+            *ngIf="angForm.controls['cpf'].hasError(validation.type) && (angForm.controls['cpf'].dirty || angForm.controls['cpf'].touched)">
+            {{validation.message}}</mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field fxFlex *ngIf="JURIDICA">
+        <mat-label>CNPJ</mat-label>
+        <input [textMask]="{mask: cnpjMask, guide: false}" type="text" matInput formControlName="cnpj">
+        <mat-error *ngFor="let validation of cliente_validation_messages.cnpj">
+          <mat-error class="error-message"
+            *ngIf="angForm.controls['cnpj'].hasError(validation.type) && (angForm.controls['cnpj'].dirty || angForm.controls['cnpj'].touched)">
+            {{validation.message}}</mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field fxFlex="25">
+        <mat-label>Telefone Fixo</mat-label>
+        <input [textMask]="{mask: foneFixoMask, guide: false}" type="text" matInput formControlName="fixo">
+        <mat-error *ngFor="let validation of cliente_validation_messages.fixo">
+          <mat-error class="error-message"
+            *ngIf="angForm.controls['fixo'].hasError(validation.type) && (angForm.controls['fixo'].dirty || angForm.controls['fixo'].touched)">
+            {{validation.message}}</mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field fxFlex="25">
+        <mat-label>Telefone Móvel</mat-label>
+        <input [textMask]="{mask: foneMask, guide: false}" type="text" matInput formControlName="celular">
+        <mat-error *ngFor="let validation of cliente_validation_messages.celular">
+          <mat-error class="error-message"
+            *ngIf="angForm.controls['celular'].hasError(validation.type) && (angForm.controls['celular'].dirty || angForm.controls['celular'].touched)">
+            {{validation.message}}</mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field fxFlex *ngIf="FISICA">
+        <mat-label>Nome do pai</mat-label>
+        <input type="text" matInput formControlName="pai">
+        <mat-error *ngFor="let validation of cliente_validation_messages.pai">
+          <mat-error class="error-message"
+            *ngIf="angForm.controls['pai'].hasError(validation.type) && (angForm.controls['pai'].dirty || angForm.controls['pai'].touched)">
+            {{validation.message}}</mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field fxFlex *ngIf="FISICA">
+        <mat-label>Nome da mãe</mat-label>
+        <input type="text" matInput formControlName="mae">
+        <mat-error *ngFor="let validation of cliente_validation_messages.mae">
+          <mat-error class="error-message"
+            *ngIf="angForm.controls['mae'].hasError(validation.type) && (angForm.controls['mae'].dirty || angForm.controls['mae'].touched)">
+            {{validation.message}}</mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field fxFlex="100">
+        <mat-label>Observações</mat-label>
+        <textarea matInput formControlName="observacao"></textarea>
+        <mat-error *ngFor="let validation of cliente_validation_messages.observacao">
+          <mat-error class="error-message"
+            *ngIf="angForm.controls['observacao'].hasError(validation.type) && (angForm.controls['observacao'].dirty || angForm.controls['observacao'].touched)">
+            {{validation.message}}</mat-error>
+        </mat-error>
+      </mat-form-field>
+
+    </div>
+  </form>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancelar</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="true" cdkFocusInitial (click)="saveUser()"
+      [disabled]="!angForm.valid">Salvar</button>
+    <button mat-raised-button color="secondary" (click)="formCliente.reset()">Limpar</button>
+  </mat-dialog-actions>
+  
+</div>

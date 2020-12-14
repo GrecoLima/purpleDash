@@ -15,6 +15,12 @@ import { TodoComponent } from './apps/todo-list/todo/todo.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { ContentAnimateDirective } from './shared/directives/content-animate.directive';
 import { TodoListComponent } from './apps/todo-list/todo-list.component';
+import {​​​​​ MaterialModule }​​​​​ from'./material.module';
+import { NovoFormComponent } from './tables/novo-form/novo-form.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { TextMaskModule } from 'angular2-text-mask';
+
+
 
 @NgModule({
   declarations: [
@@ -25,7 +31,8 @@ import { TodoListComponent } from './apps/todo-list/todo-list.component';
     TodoListComponent,
     TodoComponent,
     SpinnerComponent,
-    ContentAnimateDirective
+    ContentAnimateDirective,
+    NovoFormComponent
   ],
   imports: [
     BrowserModule,
@@ -33,10 +40,13 @@ import { TodoListComponent } from './apps/todo-list/todo-list.component';
     NgbModule,
     BrowserAnimationsModule,
     FormsModule,
+    FlexLayoutModule,
     ReactiveFormsModule,
-    ChartsModule
+    TextMaskModule,
+    ChartsModule,
+    MaterialModule
   ],
-  providers: [ThemeService],
+  providers: [ThemeService, MaterialModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

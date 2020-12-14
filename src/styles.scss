@@ -61,3 +61,40 @@
 
 /* === Layout === */
 @import "./assets/scss/layout";
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+th.mat-header-cell.th-center,
+td.td-center{
+    text-align: center;
+}
+
+input:not([type]){
+    height: 1.5rem;
+    border-bottom: 0;
+    margin: 0;
+}
+
+input:not([type]):focus:not([readonly]) {
+    border-bottom:none;
+    box-shadow:none
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]){
+    border-bottom:none;
+    box-shadow:none
+}
+
+input[type=email]:not(.browser-default):focus:not([readonly]){
+    border-bottom:none;
+    box-shadow:none
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    padding: 0 !important;
+    margin: 0;
+    background-color: #fff !important;
+}
+
+.cdk-overlay-container {
+    z-index: 9999 !important;
+}
