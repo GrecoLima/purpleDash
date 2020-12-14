@@ -155,10 +155,20 @@
     </div>
   </form>
   <mat-dialog-actions align="end">
-    <button mat-button mat-dialog-close>Cancelar</button>
-    <button mat-raised-button color="primary" [mat-dialog-close]="true" (click)="saveUser()"
-      [disabled]="!angForm.valid">Salvar</button>
-    <button mat-raised-button color="secondary" (click)="formCliente.reset()">Limpar</button>
+    <button class="btn btn-warning btn-sm" >
+      <i class="mdi mdi-keyboard-return menu-icon"></i>
+      Cancelar
+    </button>
+    <button class="btn btn-primary btn-sm" [mat-dialog-close]="true" (click)="saveUser()"
+    [disabled]="!angForm.valid">
+      <i class="mdi mdi-account-plus menu-icon"></i>
+      Salvar
+    </button>
+    <button class="btn btn-dark btn-sm" (click)="formCliente.reset()">
+      <i class="mdi mdi-eraser menu-icon"></i>
+      Limpar
+    </button>
+    
   </mat-dialog-actions>
   
 </div>
