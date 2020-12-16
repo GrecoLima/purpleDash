@@ -46,6 +46,34 @@ const ELEMENT_DATA: Clientes[] = [{
 {
   id: 7, nome: 'Fernanda Albuquerque', tipo: 'FISICA', rg: '34.377.335-3', cpf_cnpj: '567.190.070-93', email: 'falbuquerque@bol.com.br',
   pai: 'Marcos Albuquerque', mae: 'Maria Albuquerque', foneFixo: '', foneMovel: '(21) 34523-1234', nascimento: '10/05/2001'
+},
+{
+  id: 11, nome: 'Mário Gomes Pedroza', tipo: 'FISICA', rg: '11.140.955-X', cpf_cnpj: '909.365.690-12', email: 'mgp@uol.com.br',
+  pai: 'André Nascimento', mae: 'Joana Prado', foneFixo: '(21) 3212-1267', foneMovel: '(21) 99812-0912', nascimento: '20/10/1971'
+},
+{
+  id: 22, nome: 'Marcos Adriano', tipo: 'FISICA', rg: '15.321.246-5', cpf_cnpj: '179.800.320-44', email: 'madriano@outlook.com.br',
+  pai: 'Antonio Dias', mae: 'Maria Dias dos Santos', foneFixo: '(11) 2312-3413', foneMovel: '(11) 97611-0901', nascimento: '13/10/1978'
+},
+{
+  id: 33, nome: 'Comércio de Borrachas Vibrasil Ltda', tipo: 'JURIDICA', rg: '', cpf_cnpj: '78.234.150/0001-44', email: 'contato@vibrasil.com.br',
+  pai: '', mae: '', foneFixo: '(11) 4390-1102', foneMovel: '(11) 98723-1102', nascimento: ''
+},
+{
+  id: 41, nome: 'Marilene Alves Dias', tipo: 'FISICA', rg: '26.377.335-8', cpf_cnpj: '744.190.080-83', email: 'acarla@bol.com.br',
+  pai: 'Paulo Alves Dias', mae: 'Marlene Alves Dias', foneFixo: '', foneMovel: '(24) 91223-1238', nascimento: '10/02/1998'
+},
+{
+  id: 51, nome: 'Maria Dama Rica', tipo: 'FISICA', rg: '08.225.277-X', cpf_cnpj: '039.900.320-11', email: 'mariadr@uol.com.br',
+  pai: 'Rodrigo Santos', mae: 'Karen Santos Alves', foneFixo: '(11) 5312-5223', foneMovel: '(11) 98712-0979', nascimento: '20/05/1978'
+},
+{
+  id: 13, nome: 'Panificadora Bom Pão', tipo: 'JURIDICA', rg: '', cpf_cnpj: '71.334.350/0001-83', email: 'bompao@bompao.com.br',
+  pai: '', mae: '', foneFixo: '(13) 3490-3123', foneMovel: '(13) 99523-1244', nascimento: ''
+},
+{
+  id: 79, nome: 'Ivone Lara', tipo: 'FISICA', rg: '23.457.335-1', cpf_cnpj: '089.230.070-91', email: 'ivonelara@brasil.com.br',
+  pai: 'Julio Fernadez Lara', mae: 'Rosane Lara', foneFixo: '', foneMovel: '(24) 95523-1234', nascimento: '09/07/2003'
 }]
 
 @Component({

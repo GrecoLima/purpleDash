@@ -1,9 +1,9 @@
-mat-form-field {
+.mat-form-field {
     padding: 5px;
     line-height: 1.75;
 }
 
-input[type]:not(.browser-default) {
+.input[type]:not(.browser-default) {
     height: 1.5rem;
     border-bottom: 0;
     margin: 0;
