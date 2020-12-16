@@ -1,13 +1,40 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
 
+interface Cidade {
+  nomeCidade: string;
+  sigla: string;
+  id: number;
+}
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
   providers: [NgbDropdownConfig]
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
+
+  cidades: Cidade[] = [
+    { nomeCidade: 'ARAGUAIA', sigla: 'PARA', id: 21 },
+    { nomeCidade: 'BLUMENAU', sigla: 'BLUM', id: 6 },
+    { nomeCidade: 'CAÇADOR', sigla: 'CCDR', id: 22 },
+    { nomeCidade: 'CACHOEIRO DE ITAPEMIRIM', sigla: 'CACH', id: 2 },
+    { nomeCidade: 'LIMEIRA', sigla: 'LIM', id: 1 },
+    { nomeCidade: 'MACAÉ', sigla: 'MACA', id: 12 },
+    { nomeCidade: 'MAIRINQUE', sigla: 'MAIR', id: 8 },
+    { nomeCidade: 'MARANHÃO', sigla: 'MARA', id: 18 },
+    { nomeCidade: 'MAUÁ', sigla: 'MAUA', id: 3 },
+    { nomeCidade: 'PORTO FERREIRA', sigla: 'PFER', id: 10 },
+    { nomeCidade: 'RIO CLARO', sigla: 'RCLA', id: 4 },
+    { nomeCidade: 'RIO DAS OSTRAS', sigla: 'ROST', id: 7 },
+    { nomeCidade: 'RIO DE JANEIRO', sigla: 'RJAN', id: 11 },
+    { nomeCidade: 'SANEATINS', sigla: 'TOCA', id: 17 },
+    { nomeCidade: 'SANTA GERTRUDES', sigla: 'SGER', id: 5 },
+    { nomeCidade: 'SUMARÉ', sigla: 'SUMA', id: 20 },
+    { nomeCidade: 'URUGUAIANA', sigla: 'URUG', id: 9 },
+  ];
+
   public iconOnlyToggled = false;
   public sidebarToggled = false;
   
@@ -15,8 +42,6 @@ export class NavbarComponent implements OnInit {
     config.placement = 'bottom-right';
   }
 
-  ngOnInit() {
-  }
 
   // toggle sidebar in small devices
   toggleOffcanvas() {

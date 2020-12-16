@@ -19,6 +19,8 @@ import {​​​​​ MaterialModule }​​​​​ from'./material.module';
 import { NovoFormComponent } from './tables/novo-form/novo-form.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TextMaskModule } from 'angular2-text-mask';
+import { MatPaginatorIntl } from '@angular/material/paginator';
+import { PaginatorBR } from 'src/paginatorBR';
 
 
 
@@ -46,7 +48,7 @@ import { TextMaskModule } from 'angular2-text-mask';
     ChartsModule,
     MaterialModule
   ],
-  providers: [ThemeService, MaterialModule],
+  providers: [ThemeService, MaterialModule, { provide: MatPaginatorIntl, useClass: PaginatorBR}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

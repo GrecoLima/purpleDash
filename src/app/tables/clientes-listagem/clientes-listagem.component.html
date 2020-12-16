@@ -12,9 +12,6 @@
 
 <mat-form-field flex class="md-icon-float md-block md-title">
   <mat-label>Filtrar</mat-label>
-  <span matPrefix>
-    <i class="mdi mdi-magnify menu-icon"></i>
-  </span>
   <input matInput (keyup)="doFilter($event)">
 </mat-form-field>
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
