@@ -32,28 +32,36 @@
       </a>
       <div class="collapse" id="ui-basic" [ngbCollapse]="!cadastroCollapsed">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" routerLink="tables/clientes-listagem" routerLinkActive="active"
+          <li class="nav-item">
+            <a class="nav-link" routerLink="cavaletes/cavaletes-listagem" routerLinkActive="active"
+              #cavaletes="routerLinkActive">
+              Cavaletes
+              <i class="mdi mdi-plus menu-icon"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="tables/clientes-listagem" routerLinkActive="active"
               #clientes="routerLinkActive">
               Clientes
               <i class="mdi mdi-account-plus menu-icon"></i></a>
           </li>
-          <li class="nav-item"> <a class="nav-link" routerLink="tables/tipo-esgotamento" routerLinkActive="active"
-            #tipoesgotamento="routerLinkActive">
-            Esgotamento
-            <i class="mdi mdi-plus-box menu-icon"></i></a>
-        </li>
-        <li class="nav-item"> <a class="nav-link" routerLinkActive="active">
-          Ligação
-          <i class="mdi mdi-plus-box menu-icon"></i></a>
-      </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="tables/tipo-esgotamento" routerLinkActive="active"
+              #tipoesgotamento="routerLinkActive">
+              Esgotamento
+              <i class="mdi mdi-plus-box menu-icon"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active">Ligação<i class="mdi mdi-plus-box menu-icon"></i></a>
+          </li>
         </ul>
       </div>
     </li>
 
     <li class="nav-item" [ngClass]="{ 'active': cliente.isActive }">
-      <a class="nav-link" href="http://localhost:4401/clientes" routerLinkActive #cliente="routerLinkActive" target="_blank">
-        <span class="menu-title">Cadastro Cliente - SAN4</span>
-        <i class="mdi mdi-account-plus menu-icon"></i>
+      <a class="nav-link" href="https://app-cavaletes.herokuapp.com/cavaletes" routerLinkActive #cliente="routerLinkActive"
+        target="_blank">
+        <span class="menu-title">Cadastro Cavaletes - SAN4 </span>
+        <i class="mdi mdi-plus menu-icon"></i>
       </a>
     </li>
     <!-- <li class="nav-item" [ngClass]="{ 'active': charts.isActive }">

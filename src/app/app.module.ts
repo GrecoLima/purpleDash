@@ -21,6 +21,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { TextMaskModule } from 'angular2-text-mask';
 import { MatPaginatorIntl } from '@angular/material/paginator';
 import { PaginatorBR } from 'src/paginatorBR';
+import { CavaletesModule } from './features/Cavaletes/cavaletes.module';
 
 
 
@@ -46,7 +47,8 @@ import { PaginatorBR } from 'src/paginatorBR';
     ReactiveFormsModule,
     TextMaskModule,
     ChartsModule,
-    MaterialModule
+    MaterialModule,
+    CavaletesModule,
   ],
   providers: [ThemeService, MaterialModule, { provide: MatPaginatorIntl, useClass: PaginatorBR}],
   bootstrap: [AppComponent]

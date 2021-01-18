@@ -114,7 +114,7 @@
         .nav-link {
           .menu-title {
             color: $sidebar-menu-active-color;
-            font-family: $type1-medium;            
+            font-family: $type1-medium;
           }
           i {
             color: theme-color(light);
@@ -123,7 +123,7 @@
       }
 
       &:hover{
-        //TODO 
+        //TODO
         background: $sidebar-menu-hover-bg;
         // border-top-right-radius: 25em;
         // border-bottom-right-radius: 25em;
@@ -208,21 +208,6 @@
           line-height: 1;
           height: auto;
           border-top: 0;
-          &:before {
-            content: "\F054";
-            font-family: "Material Design Icons";
-            display: block;
-            position: absolute;
-            left:0px;
-            .rtl & {
-              left: auto;
-              right: 0;
-            }
-            top:50%;
-            @include transform(translateY(-50%));
-            color: lighten($sidebar-submenu-color, 10%);
-            font-size: .75rem;
-          }
           &.active {
             color: $sidebar-menu-active-color;
             background: transparent;
@@ -255,7 +240,7 @@
           .nav-link {
             display: block;
             padding-left: .5rem;
-            padding-right: .5rem;            
+            padding-right: .5rem;
             text-align: center;
             position: static;
             .menu-title,
@@ -301,7 +286,7 @@
                 z-index: 1;
                 line-height: 1.8;
                 -webkit-box-shadow: 4px 0px 7px 0px rgba(182, 185, 189, 0.25);
-                        box-shadow: 4px 0px 7px 0px rgba(182, 185, 189, 0.25);              
+                        box-shadow: 4px 0px 7px 0px rgba(182, 185, 189, 0.25);
                 &:after {
                   display: none;
                 }
